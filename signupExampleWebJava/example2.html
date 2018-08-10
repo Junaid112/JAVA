@@ -1,0 +1,105 @@
+<html>
+
+<head>
+
+<script>
+/***********************************	
+	Lab:	06
+	Task:	01
+	Developer:
+		Roll #:	BSEF11M026
+		Name:	JUNAID AHMED GHAURI			
+***********************************/
+
+function validate()
+{
+	var nam=f.n.value;
+	var addr=f.adr.value;
+	var em=f.e.value;
+	var pss=f.p.value;
+	
+if (nam=="") 
+{
+	//alert("Cant be emty");
+var y = document.getElementById("namecell");
+y.inerHTML="NULL";
+
+document.f.e1.value = "Invalid User name";       
+}
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<fieldset>
+<legend> <h3> LogIn</h3> </legend>
+<form name="f" onsubmit="validate()">
+<br>
+<br>
+Name <input type="text" name="n">
+<br>
+<br>
+Email <input type="text" name="e">
+<br>
+<br>
+passwd <input type=password name="p">
+<br>
+<br>
+Address <input type="text" name="adr">
+<br>
+<br>
+<input type="reset" value="Clear">
+
+<input type="button" name="submit1" value="Submit" onclick = "validate()">
+
+<br>
+<br>
+<table border="1">
+  <tr>
+    <th>Field_Name</th>
+    <th>Value</th>
+<th>Error</th>  
+</tr>
+  <tr id="namerow">
+    <td ><input type="text" name="e1" disabled/></td>
+    <td id="namecell"></td>
+	  
+	<td>Error (cant Empty)</td>
+  </tr>
+
+  <tr>
+    <td>Email</td>
+    <td>e</td>
+	  
+	<td>Error (cant Empty)</td>
+  </tr>
+
+  <tr>
+    <td>Passsword</td>
+    <td>p</td>
+	  
+	<td>Error (cant Empty)</td>
+  </tr>
+
+  <tr>
+    <td>Address</td>
+    <td>adr</td>
+	  
+	<td>Error (cant Empty)</td>
+  </tr>
+
+
+</table> 	
+
+
+</form>
+</fieldset>
+
+
+<body>
+
+</html>

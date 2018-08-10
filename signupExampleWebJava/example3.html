@@ -1,0 +1,127 @@
+<html>
+
+<head>
+<title>Sign-up Page</title>
+
+<script>
+function validate()
+{
+	document.signup.divname.value = document.signup.name.value;
+	document.signup.divpwd.value = document.signup.pwd.value;
+	document.signup.divemail.value = document.signup.email.value;
+	document.signup.divaddress.value = document.signup.address.value;
+
+
+	
+	
+	if(document.signup.name.value == "")
+	{
+		document.signup.e1.value = "Invalid User name";
+	}
+	
+	if(document.signup.name.value != "")
+	{
+		document.signup.e1.value = " ";
+	}
+	
+	if(document.signup.pwd.value == "")
+	{
+		document.signup.e2.value = "Invalid Password";
+	}
+	if(document.signup.pwd.value != "")
+	{
+		document.signup.e2.value = " ";
+	}	
+	
+	if(document.signup.email.value == "")
+	{
+		document.signup.e3.value = "Invalid e-mail";
+	}
+	if(document.signup.email.value != "")
+	{
+		document.signup.e3.value = " ";
+	}
+	
+	if(document.signup.address.value == "")
+	{
+		document.signup.e4.value = "Invalid Address";
+	}
+	if(document.signup.address.value != "")
+	{
+		document.signup.e4.value = " ";
+	}
+}
+</script>
+
+</head>
+
+<body bgcolor = "lightblue">
+
+<b><u><h1 align="center" style="color:blue">Welcome to Sign-up Page</h1></u></b>
+<form name = "signup" method="post" action="lab8">
+<table border = "2" align="center" bgcolor = "lightgreen">
+
+	<tr>
+		<td>User Name</td>
+		<td><input type="text" name="name" /></td>
+	</tr>
+
+	<tr>
+		<td>Password</td>
+		<td><input type="password" name="pwd"/></td>
+	</tr>
+
+	<tr>
+		<td>E-mail</td>
+		<td><input type="text" name="email"/></td></td>
+	</tr>
+
+	<tr>
+		<td>Address</td>
+		<td><input type="text" name="address"/></td>
+	</tr>
+
+	<tr>
+		<td></td>
+		<td><input type="button" name="submit1" value="Submit" onclick = "validate()"></td>
+	</tr>
+
+</table>
+
+
+<br/><br/><br/>
+
+
+<table border = "2" align="center" bgcolor = "lightgreen">
+
+	<tr>
+		<td>User Name</td>
+		<td><input type="text" name="divname" disabled/></td>
+		<td><div name="div5" value = "Invalid User name"><input type="text" name="e1" disabled/></div></td>
+	</tr>
+
+	<tr>
+		<td>Password</td>
+		<td><input type="text" name="divpwd" disabled/> </td>
+		<td><div name="div6" value = "Invalid Password"><input type="text" name="e2" disabled/></div></td>
+	</tr>
+
+	<tr>
+		<td>E-mail</td>
+		<td><input type="text"  name="divemail" disabled/></td>
+		<td><div name="div7" value = "Invalid e-mail"><input type="text" name="e3" disabled/></div></td>
+	</tr>
+
+	<tr>
+		<td>Address</td>
+		<td><input type="text"  name="divaddress" disabled/></td>
+		<td><div name="div8" value = "Invalid Address"><input type="text" name="e4" disabled/></div></td>
+	</tr>
+
+</table>
+
+
+</form>
+
+</body>
+</html>
